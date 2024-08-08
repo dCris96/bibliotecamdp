@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #F0EEE2;
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  gap: 40px;
+}
+
+aside {
+  position: relative;
+  padding: 30px 60px;
+  width: 200px;
+}
+aside .logo {
+  width: 60px;
+}
+aside .logo figure {
+  width: 100%;
+}
+aside .logo figure img {
+  width: 100%;
+  display: inline-block;
+}
+aside .menu {
+  margin-top: 40px;
+}
+aside .menu nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+aside .menu nav ul li .selected {
+  color: #E36065;
+}
+aside .menu nav ul li a {
+  color: #272935;
+  text-decoration: none;
+}
+aside::before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 80%;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  background-color: #ACACAC;
+}
+
+.btn__ref {
+  text-decoration: none;
+  background-color: #272935;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-top: 10px;
+  transition: all ease-in-out 300ms;
+}
+.btn__ref:hover {
+  background-color: #E36065;
+}
+
+main {
+  width: 100%;
+  height: 100%;
+  padding: 30px 60px 0 0;
+}
+main .home__top {
+  display: flex;
+  gap: 40px;
+}
+main .home__top .mas__leido {
+  display: flex;
+}
+main .home__top .intro h1 {
+  font-family: "Berkshire Swash", serif;
+  font-size: 4rem;
+  line-height: 3.4rem;
+}
+main .home__top .intro p {
+  margin-top: 20px;
+  text-align: justify;
+}
+main .all__books {
+  width: 100%;
+}
+main .all__books .slider {
+  max-width: 100%;
+  display: flex;
+}
+main .all__books .slider .card {
+  width: 150px;
+}
+main .all__books .slider .card figure {
+  width: 100%;
+}
+main .all__books .slider .card figure img {
+  width: 100%;
+  display: inline-block;
+}
+main .books__prefer .contenido figure img {
+  width: 20px;
+}/*# sourceMappingURL=styles.css.map */
