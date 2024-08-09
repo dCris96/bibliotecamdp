@@ -20,13 +20,14 @@ body{
 }
 
 .header{
-    background-color: orange;
-    padding: 1rem;
+    transition: all ease 600ms;
     .navbar{
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
+        position: relative;
+        z-index: 100;
 
         .entidad{
             display: none;
@@ -34,21 +35,31 @@ body{
 
         .hamburger{
             display: block;
+            z-index: 100;
         }
 
         .nav-menu{
-            background-color: red;
+            background-color: rgba($color: #241060, $alpha: 0.5);
+            backdrop-filter: blur(20px);
             width: 100%;
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
             align-items: center;
+            position: absolute;
+            top: -100vh;
+            left: 0;
+            transition: all ease 500ms;
 
             a{
                 display: block;
-                padding: 20px;
+                padding: 30px;
                 color: #fff;
             }
+        }
+        .nav-menu.activo{
+            // display: flex;
+            top: 100%;
         }
     }
 
@@ -63,9 +74,16 @@ body{
             }
 
             .nav-menu{
+                // display: flex;
+                position: relative;
+                top: 0;
                 flex: 1;
                 flex-flow: row nowrap;
             }
         }
     }
+}
+
+.header.activador{
+    background-color: rgba($color: #241060, $alpha: 0.5);
 }

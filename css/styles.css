@@ -20,33 +20,44 @@ body {
 }
 
 .header {
-  background-color: orange;
-  padding: 1rem;
+  transition: all ease 600ms;
 }
 .header .navbar {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
   align-items: center;
+  position: relative;
+  z-index: 100;
 }
 .header .navbar .entidad {
   display: none;
 }
 .header .navbar .hamburger {
   display: block;
+  z-index: 100;
 }
 .header .navbar .nav-menu {
-  background-color: red;
+  background-color: rgba(36, 16, 96, 0.5);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: center;
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  transition: all ease 500ms;
 }
 .header .navbar .nav-menu a {
   display: block;
-  padding: 20px;
+  padding: 30px;
   color: #fff;
+}
+.header .navbar .nav-menu.activo {
+  top: 100%;
 }
 @media screen and (min-width: 800px) {
   .header .navbar .entidad {
@@ -56,7 +67,13 @@ body {
     display: none;
   }
   .header .navbar .nav-menu {
+    position: relative;
+    top: 0;
     flex: 1;
     flex-flow: row nowrap;
   }
+}
+
+.header.activador {
+  background-color: rgba(36, 16, 96, 0.5);
 }/*# sourceMappingURL=styles.css.map */
