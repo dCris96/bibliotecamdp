@@ -8,98 +8,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="./css/hamburgers.css" rel="stylesheet">
     <title>Biblioteca Municipal</title>
 </head>
 <body>
-    <aside>
+    <header class="cabezera">
+        <nav class="navbar">
+            <div class="entidad">Municipalidad Distrital de Pampas</div>
+            <div class="menu-btn" id="menu-btn">
+                <button class="hamburger hamburger--spring" id="burguer" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+
         <div class="logo">
             <figure>
-                <img src="./img/escudo.png" alt="Logo MDP">
+                <img src="./img/mdp logo.png" alt="">
             </figure>
         </div>
-        <div class="menu">
-            <nav>
-                <ul>
-                    <li><a  class="selected" href=""><i class="fa-solid fa-house-chimney"></i> Inicio</a></li>
-                    <li><a href=""><i class="fa-solid fa-book"></i> Libros</a></li>
-                    <li><a href=""><i class="fa-solid fa-circle-info"></i> Más</a></li>
-                </ul>
-            </nav>
-        </div>
-    </aside>
+    </header>
 
-    <div class="vertical__line"></div>
-
-    <main>
-        <section class="home__top">
-            <div class="intro">
-                <h1>Feliz lectura, Pampasino</h1>
-                <p>¡Vaya, has comenzado a explorar las maravillas de nuestra cultura y naturaleza! ¿Has descubierto ya el misterio detrás del labrado de cera o los secretos de nuestras lagunas mágicas? Oops, parece que aún no has llegado. Sigue leyendo y sumérgete en la riqueza de nuestra cultura.</p>
-                <a class="btn__ref" href="#">Empezar a leer <i class="fa-solid fa-glasses"></i></a>
-            </div>
-            <div class="mas__leido">
-                <figure>
-                    <img src="./img//open-book.png" alt="">
-                </figure>
-                <div class="text">
-                    <h3>Fe y tradición</h3>
-                    <span>23 / 45 páginas</span>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad architecto corporis voluptas ab tenetur fugiat, ratione et. Nesciunt numquam ab corporis doloribus optio mollitia culpa nisi, molestiae ducimus quibusdam excepturi.</p>
-                </div>
-            </div>
-        </section>
-        <section class="all__books">
-            <div class="title">
-                <h2>Libros</h2>
-                <div class="decoration">
-                    <i class="fa-regular fa-circle"></i>
-                    <i class="fa-regular fa-circle"></i>
-                </div>
-            </div>
-            <div class="slider">
-                <div class="card">
-                    <figure>
-                        <img src="./img/1.png" alt="Imagen de libro">
-                    </figure>
-                    <div class="book__title">
-                        Fe y tradición: Guardianes del tiempo
-                    </div>
-                </div>
-                <div class="card">
-                    <figure>
-                        <img src="./img/2.png" alt="Imagen de libro">
-                    </figure>
-                    <div class="book__title">
-                        Fe y tradición: Guardianes del tiempo
-                    </div>
-                </div>
-                <div class="card">
-                    <figure>
-                        <img src="./img/3.png" alt="Imagen de libro">
-                    </figure>
-                    <div class="book__title">
-                        Fe y tradición: Guardianes del tiempo
-                    </div>
-                </div>
-                <div class="card">
-                    <figure>
-                        <img src="./img/1.png" alt="Imagen de libro">
-                    </figure>
-                    <div class="book__title">
-                        Fe y tradición: Guardianes del tiempo
-                    </div>
-                </div>
-                <div class="card">
-                    <figure>
-                        <img src="./img/2.png" alt="Imagen de libro">
-                    </figure>
-                    <div class="book__title">
-                        Fe y tradición: Guardianes del tiempo
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
     <script src="./js/main.js"></script>
 </body>
 </html>

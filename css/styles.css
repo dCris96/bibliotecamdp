@@ -5,106 +5,38 @@
 }
 
 body {
-  background-color: #F0EEE2;
   font-family: "Roboto", sans-serif;
-  display: flex;
-  gap: 40px;
+  font-size: 16px;
 }
 
-aside {
+.cabezera {
+  background-image: url(../img/bg-header.png);
+  background-size: cover;
+}
+.cabezera .navbar {
+  display: block;
   position: relative;
-  padding: 30px 60px;
-  width: 200px;
 }
-aside .logo {
-  width: 60px;
+.cabezera .navbar .entidad {
+  display: none;
 }
-aside .logo figure {
+.cabezera .navbar .nav-menu {
   width: 100%;
-}
-aside .logo figure img {
-  width: 100%;
-  display: inline-block;
-}
-aside .menu {
-  margin-top: 40px;
-}
-aside .menu nav ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-aside .menu nav ul li .selected {
-  color: #E36065;
-}
-aside .menu nav ul li a {
-  color: #272935;
-  text-decoration: none;
-}
-aside::before {
+  text-align: center;
   position: absolute;
-  content: "";
-  width: 2px;
-  height: 80%;
-  top: 50%;
-  left: 100%;
-  transform: translateY(-50%);
-  background-color: #ACACAC;
+  top: 100%;
+  left: 0;
+  height: 17rem;
 }
-
-.btn__ref {
-  text-decoration: none;
-  background-color: #272935;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 20px;
-  display: inline-block;
-  margin-top: 10px;
+.cabezera .navbar .nav-menu li {
   transition: all ease-in-out 300ms;
 }
-.btn__ref:hover {
-  background-color: #E36065;
+.cabezera .navbar .nav-menu li a {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: #f2f2f2;
 }
-
-main {
-  width: 100%;
-  height: 100%;
-  padding: 30px 60px 0 0;
-}
-main .home__top {
-  display: flex;
-  gap: 40px;
-}
-main .home__top .mas__leido {
-  display: flex;
-}
-main .home__top .intro h1 {
-  font-family: "Berkshire Swash", serif;
-  font-size: 4rem;
-  line-height: 3.4rem;
-}
-main .home__top .intro p {
-  margin-top: 20px;
-  text-align: justify;
-}
-main .all__books {
-  width: 100%;
-}
-main .all__books .slider {
-  max-width: 100%;
-  display: flex;
-}
-main .all__books .slider .card {
-  width: 150px;
-}
-main .all__books .slider .card figure {
-  width: 100%;
-}
-main .all__books .slider .card figure img {
-  width: 100%;
-  display: inline-block;
-}
-main .books__prefer .contenido figure img {
-  width: 20px;
+.cabezera .navbar .nav-menu li:hover {
+  background-color: #ffae00;
 }/*# sourceMappingURL=styles.css.map */
