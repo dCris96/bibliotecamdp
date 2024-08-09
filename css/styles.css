@@ -16,7 +16,8 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   background-image: url(../img/bg-header.png);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .header {
@@ -70,8 +71,14 @@ body {
   transform: translateY(0);
 }
 @media screen and (min-width: 768px) {
+  .header .navbar {
+    padding: 0px 20px;
+  }
   .header .navbar .entidad {
     display: block;
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
   }
   .header .navbar .hamburger {
     display: none;
@@ -86,5 +93,55 @@ body {
     top: 0;
     flex: 1;
     flex-flow: row nowrap;
+    justify-content: flex-end;
   }
+  .header .navbar .nav-menu li {
+    width: auto;
+  }
+  .header .navbar .nav-menu li a {
+    padding: 20px;
+    border-bottom: 4px solid transparent;
+  }
+  .header .navbar .nav-menu li a:hover {
+    border-color: #fff;
+    background-color: transparent;
+  }
+}
+
+.main .logo {
+  margin: 100px 0 40px;
+  width: 100%;
+  text-align: center;
+}
+.main .logo h1 {
+  text-transform: uppercase;
+  color: #241060;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.main .logo .image img {
+  width: 100%;
+}
+.main .icons {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+.main .icons .icon {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 5px;
+}
+.main .icons .icon .image {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+}
+.main .icons .icon .image i {
+  color: #535353;
 }/*# sourceMappingURL=styles.css.map */
