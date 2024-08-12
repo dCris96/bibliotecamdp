@@ -126,6 +126,7 @@ body {
   display: flex;
   justify-content: space-around;
   gap: 10px;
+  padding: 10px 20px;
 }
 .main .icons .icon {
   display: flex;
@@ -144,4 +145,102 @@ body {
 }
 .main .icons .icon .image i {
   color: #535353;
+}
+.main .icons .icon .title {
+  color: #8b8b8b;
+}
+.main .welcome {
+  padding: 20px;
+}
+.main .welcome .title {
+  font-family: "Berkshire Swash", serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.main .welcome .text {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+.main .welcome .boton {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: #241060;
+  border-radius: 40px;
+  text-align: center;
+}
+.main .carousel-container {
+  position: relative;
+  width: 90%;
+  max-width: 1200px;
+  overflow: hidden;
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.main .carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+.main .carousel-item {
+  flex: 1 0 100%;
+  max-width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+.main .carousel-item img {
+  width: 100px;
+  height: auto;
+}
+.main .prev, .main .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.main .prev {
+  left: 10px;
+}
+.main .next {
+  right: 10px;
+}
+.main .prev:hover, .main .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.main p {
+  margin-top: 10px;
+  font-weight: bold;
+}
+@media (min-width: 600px) {
+  .main .carousel-item {
+    flex: 1 0 50%;
+  }
+  .main .carousel-item img {
+    width: 150px;
+  }
+}
+@media (min-width: 900px) {
+  .main .carousel-item {
+    flex: 1 0 33.33%;
+  }
+  .main .carousel-item img {
+    width: 200px;
+  }
+}
+@media (min-width: 1200px) {
+  .main .carousel-item {
+    flex: 1 0 25%;
+  }
+  .main .carousel-item img {
+    width: 250px;
+  }
 }/*# sourceMappingURL=styles.css.map */

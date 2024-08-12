@@ -39,7 +39,7 @@
             </figure>
         </section>
 
-        <div class="icons">
+        <section class="icons">
             <div class="icon">
                 <span class="image"><i class="fa-solid fa-building-columns"></i></span>
                 <span class="title">Cultura</span>
@@ -49,10 +49,6 @@
                 <span class="title">Historia</span>
             </div>
             <div class="icon">
-                <span  class="image"><i class="fa-solid fa-lightbulb"></i></span>
-                <span class="title">Sabiduría</span>
-            </div>
-            <div class="icon">
                 <span  class="image"><i class="fa-solid fa-hand-holding-heart"></i></span>
                 <span class="title">Tradición</span>
             </div>
@@ -60,7 +56,55 @@
                 <span  class="image"><i class="fa-solid fa-fingerprint"></i></span>
                 <span class="title">Identidad</span>
             </div>
-        </div>
+        </section>
+
+        <section class="welcome">
+            <h2 class="title">Feliz lectura, pampasino</h2>
+            <p class="text">¡Vaya, has comenzado a explorar las maravillas de nuestra cultura y naturaleza! ¿Has descubierto ya el misterio detrás del labrado de cera o los secretos de nuestras lagunas mágicas? Oops, parece que aún no has llegado. Sigue leyendo y sumérgete en la riqueza de nuestra cultura.</p>
+            <a class="boton" href="#">Empezar a leer <i class="fa-solid fa-book-open-reader"></i></a>
+        </section>
+
+        <section class="slider__libros">
+            <!-- <div class="slider__controles">
+                <h3 class="titulo">Todos los libros</h3>
+                <div class="indicadores"></div>
+            </div>
+
+            <div class="contenedor__principal">
+                <button role="button" id="flechaIzquierda" class="flecha__izquierda"><i class="fa-solid fa-angle-left"></i></button>
+
+                <div class="contenedor-carousel">
+                    <div class="carousel">
+                        
+                    </div>
+                </div>
+
+                <button role="button" id="flechaDerecha" class="flecha__derecha"><i class="fa-solid fa-angle-right"></i></button>
+            </div> -->
+
+            <div class="carousel-container">
+                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="./img/1.png" alt="Fe y Tradición: Guardianes del tiempo">
+                        <p>Fe y tradición: Guardianes del tiempo</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/2.png" alt="Reyes Caídos">
+                        <p>Reyes caídos</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/3.png" alt="El Caballero Astado">
+                        <p>El caballero Astado</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/1.png" alt="Flora y Fauna Pampasina">
+                        <p>Flora y fauna pampasina</p>
+                    </div>
+                </div>
+                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+            </div>
+        </section>
     </main>
 
     <script src="./js/main.js"></script>
