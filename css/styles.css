@@ -13,6 +13,12 @@ li {
   list-style: none;
 }
 
+:root {
+  --color-primario: ;
+  --color-secundario: ;
+  --color-terciario: ;
+}
+
 body {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -127,7 +133,7 @@ body {
   font-size: 2rem;
 }
 .main .logo .image {
-  width: 80%;
+  width: 60%;
   margin: auto;
 }
 .main .logo .image img {
