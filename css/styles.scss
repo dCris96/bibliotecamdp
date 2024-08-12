@@ -32,6 +32,9 @@ body{
 
         .entidad{
             display: none;
+            color: #13444d;
+            font-size: 2rem;
+            font-weight: 700;
         }
 
         .hamburger{
@@ -62,6 +65,8 @@ body{
                     color: #fff;
                     text-align: center;
                     transition: all ease 300ms;
+                    font-size: 1.5rem;
+                    font-weight: 700;
                 }
                 a:hover{
                     background-color: orange;
@@ -78,9 +83,6 @@ body{
             padding: 0px 20px;
             .entidad{
                 display: block;
-                color: #fff;
-                font-size: 1.5rem;
-                font-weight: 700;
             }
 
             .hamburger{
@@ -97,14 +99,18 @@ body{
                 flex: 1;
                 flex-flow: row nowrap;
                 justify-content: flex-end;
+                padding: 10px 0;
+                gap: 10px;
                 li{
                     width: auto;
                     a{
-                        padding: 20px;
+                        font-size: 1rem;
+                        padding: 10px;
                         border-bottom: 4px solid transparent;
+                        color: #4f784e;
                     }
                     a:hover{
-                        border-color: #fff;
+                        border-color: #4f784e;
                         background-color: transparent;
                     }
                 }
@@ -120,13 +126,16 @@ body{
         text-align: center;
         h1{
             text-transform: uppercase;
-            color: #241060;
+            color: #13444d;
             font-weight: 700;
             font-size: 2rem;
         }
         .image{
+            width: 80%;
+            margin: auto;
             img{
                 width: 100%;
+                display: inline-block;
             }
         }
     }
@@ -147,14 +156,14 @@ body{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background-color: #d1d1d1;
+                background-color: #13444d;
                 border-radius: 50%;
                 i{
-                    color: #535353;
+                    color: #fff;
                 }
             }
             .title{
-                color: #8b8b8b;
+                color: #13444d;
             }
         }
     }
@@ -165,10 +174,12 @@ body{
             font-family: "Berkshire Swash", serif;
             font-size: 2rem;
             margin-bottom: 10px;
+            color: #4f784e;
         }
         .text{
             text-align: justify;
             margin-bottom: 15px;
+            color: #13444d;
         }
         .boton{
             display: block;
@@ -177,7 +188,7 @@ body{
             font-size: 1rem;
             font-weight: 700;
             color: #fff;
-            background-color: #241060;
+            background-color: #13444d;
             border-radius: 40px;
             text-align: center;
         }
@@ -191,6 +202,7 @@ body{
                 font-family: "Berkshire Swash", serif;
                 font-size: 2rem;
                 margin-bottom: 10px;
+                color: #4f784e;
             }
         }      
         .carousel-container {
@@ -218,6 +230,7 @@ body{
                 max-width: 200px;
                 margin: auto;
                 margin-top: 5px;
+                color: #2d5e4c;
             }
         }
         
