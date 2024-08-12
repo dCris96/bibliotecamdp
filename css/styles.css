@@ -14,7 +14,7 @@ li {
 }
 
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 16px;
   background-image: url(../img/bg-header.png);
   background-size: contain;
@@ -110,7 +110,7 @@ body {
 }
 
 .main .logo {
-  margin: 100px 0 40px;
+  margin: 20px 0;
   width: 100%;
   text-align: center;
 }
@@ -177,29 +177,38 @@ body {
   padding: 20px;
   /* Estilos para el ítem enfocado */
 }
+.main .slider__libros .slider__controles {
+  margin-bottom: 20px;
+}
+.main .slider__libros .slider__controles .title {
+  font-family: "Berkshire Swash", serif;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
 .main .slider__libros .carousel-container {
   position: relative;
-  width: 90%;
+  width: 100%;
   max-width: 1200px;
   overflow: hidden;
-  background-color: white;
   padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  margin: auto;
 }
 .main .slider__libros .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
+  gap: 5px;
 }
 .main .slider__libros .carousel-item {
   flex: 1 0 100%;
   max-width: 100%;
-  text-align: center;
   padding: 10px;
+  text-align: center;
   transition: transform 0.3s ease-in-out;
+}
+.main .slider__libros .carousel-item p {
+  max-width: 200px;
+  margin: auto;
+  margin-top: 5px;
 }
 .main .slider__libros .carousel-item img {
   width: 100px;
@@ -215,7 +224,10 @@ body {
   border: none;
   padding: 10px;
   cursor: pointer;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
+  z-index: 10;
 }
 .main .slider__libros .prev {
   left: 10px;
@@ -241,6 +253,10 @@ body {
 @media (min-width: 900px) {
   .main .slider__libros .carousel-item {
     flex: 1 0 33.33%;
+    text-align: left;
+  }
+  .main .slider__libros .carousel-item p {
+    margin: 5px 0 0 0;
   }
   .main .slider__libros .carousel-item img {
     width: 200px;
