@@ -65,25 +65,13 @@
         </section>
 
         <section class="slider__libros">
-            <!-- <div class="slider__controles">
+            <div class="slider__controles">
                 <h3 class="titulo">Todos los libros</h3>
                 <div class="indicadores"></div>
             </div>
 
-            <div class="contenedor__principal">
-                <button role="button" id="flechaIzquierda" class="flecha__izquierda"><i class="fa-solid fa-angle-left"></i></button>
-
-                <div class="contenedor-carousel">
-                    <div class="carousel">
-                        
-                    </div>
-                </div>
-
-                <button role="button" id="flechaDerecha" class="flecha__derecha"><i class="fa-solid fa-angle-right"></i></button>
-            </div> -->
-
             <div class="carousel-container">
-                <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+                <button class="prev" onclick="moveSlide(-1)"><i class="fa-solid fa-angle-left"></i></button>
                 <div class="carousel">
                     <div class="carousel-item">
                         <img src="./img/1.png" alt="Fe y Tradición: Guardianes del tiempo">
@@ -101,12 +89,29 @@
                         <img src="./img/1.png" alt="Flora y Fauna Pampasina">
                         <p>Flora y fauna pampasina</p>
                     </div>
+                    <div class="carousel-item">
+                        <img src="./img/1.png" alt="Fe y Tradición: Guardianes del tiempo">
+                        <p>Fe y tradición: Guardianes del tiempo</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/2.png" alt="Reyes Caídos">
+                        <p>Reyes caídos</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/3.png" alt="El Caballero Astado">
+                        <p>El caballero Astado</p>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./img/1.png" alt="Flora y Fauna Pampasina">
+                        <p>Flora y fauna pampasina</p>
+                    </div>
                 </div>
-                <button class="next" onclick="moveSlide(1)">&#10095;</button>
+                <button class="next" onclick="moveSlide(1)"><i class="fa-solid fa-angle-right"></i></button>
             </div>
         </section>
     </main>
 
     <script src="./js/main.js"></script>
+    <script src="./js/carrousel.js"></script>
 </body>
 </html>

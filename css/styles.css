@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -172,7 +173,11 @@ body {
   border-radius: 40px;
   text-align: center;
 }
-.main .carousel-container {
+.main .slider__libros {
+  padding: 20px;
+  /* Estilos para el ítem enfocado */
+}
+.main .slider__libros .carousel-container {
   position: relative;
   width: 90%;
   max-width: 1200px;
@@ -181,22 +186,27 @@ body {
   padding: 20px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
-.main .carousel {
+.main .slider__libros .carousel {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-.main .carousel-item {
+.main .slider__libros .carousel-item {
   flex: 1 0 100%;
   max-width: 100%;
   text-align: center;
   padding: 10px;
+  transition: transform 0.3s ease-in-out;
 }
-.main .carousel-item img {
+.main .slider__libros .carousel-item img {
   width: 100px;
   height: auto;
+  transition: transform 0.3s ease-in-out;
 }
-.main .prev, .main .next {
+.main .slider__libros .prev, .main .slider__libros .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -207,40 +217,46 @@ body {
   cursor: pointer;
   border-radius: 50%;
 }
-.main .prev {
+.main .slider__libros .prev {
   left: 10px;
 }
-.main .next {
+.main .slider__libros .next {
   right: 10px;
 }
-.main .prev:hover, .main .next:hover {
+.main .slider__libros .prev:hover, .main .slider__libros .next:hover {
   background-color: rgba(0, 0, 0, 0.8);
 }
-.main p {
+.main .slider__libros p {
   margin-top: 10px;
   font-weight: bold;
 }
 @media (min-width: 600px) {
-  .main .carousel-item {
+  .main .slider__libros .carousel-item {
     flex: 1 0 50%;
   }
-  .main .carousel-item img {
+  .main .slider__libros .carousel-item img {
     width: 150px;
   }
 }
 @media (min-width: 900px) {
-  .main .carousel-item {
+  .main .slider__libros .carousel-item {
     flex: 1 0 33.33%;
   }
-  .main .carousel-item img {
+  .main .slider__libros .carousel-item img {
     width: 200px;
   }
 }
 @media (min-width: 1200px) {
-  .main .carousel-item {
+  .main .slider__libros .carousel-item {
     flex: 1 0 25%;
   }
-  .main .carousel-item img {
+  .main .slider__libros .carousel-item img {
     width: 250px;
   }
+}
+.main .slider__libros .carousel-item.focused {
+  transform: scale(1.1);
+}
+.main .slider__libros .carousel-item.focused img {
+  transform: scale(1.1);
 }/*# sourceMappingURL=styles.css.map */
