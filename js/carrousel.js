@@ -1,82 +1,71 @@
 let currentSlide = 0;
 let isDragging = false;
-let startPosition = 0;
+let startPos = 0;
 let currentTranslate = 0;
-let previousTranslate = 0;
-let animationID = 0;
+let prevTranslate = 0;
+let animationID;
+let autoAdvanceInterval;
+
 const carousel = document.querySelector('.carousel');
 const items = document.querySelectorAll('.carousel-item');
-const totalItems = items.length;
 
 function updateFocus() {
     items.forEach((item, index) => {
         item.classList.remove('focused');
         if (index === currentSlide) {
             item.classList.add('focused');
-        } else {
-            item.classList.remove('focused');
         }
     });
-
-    // Ajusta la posición para centrar el ítem enfocado
-    const visibleItems = Math.floor(carousel.clientWidth / document.querySelector('.carousel-item').clientWidth);
-    const offset = -currentSlide * (100 / visibleItems);
-    carousel.style.transform = `translateX(${offset}%)`;
 }
 
 function moveSlide(direction) {
+    const totalItems = items.length;
     const visibleItems = Math.floor(carousel.clientWidth / document.querySelector('.carousel-item').clientWidth);
+
     currentSlide = (currentSlide + direction + totalItems) % totalItems;
     const offset = -currentSlide * (100 / visibleItems);
     carousel.style.transform = `translateX(${offset}%)`;
+
     updateFocus();
 }
 
-function autoMoveSlide() {
-    moveSlide(1);
+function startAutoAdvance() {
+    autoAdvanceInterval = setInterval(() => moveSlide(1), 3000);
 }
 
-function setPositionByIndex() {
-    const visibleItems = Math.floor(carousel.clientWidth / document.querySelector('.carousel-item').clientWidth);
-    currentTranslate = currentSlide * (-100 / visibleItems);
-    previousTranslate = currentTranslate;
-    setCarouselPosition();
-    updateFocus();
+function stopAutoAdvance() {
+    clearInterval(autoAdvanceInterval);
 }
 
-function setCarouselPosition() {
-    carousel.style.transform = `translateX(${currentTranslate}%)`;
-}
-
-function startDrag(event) {
+function touchStart(event) {
     isDragging = true;
-    startPosition = getPositionX(event);
+    stopAutoAdvance();
+    startPos = getPositionX(event);
     animationID = requestAnimationFrame(animation);
     carousel.classList.add('grabbing');
 }
 
-function endDrag() {
-    isDragging = false;
-    cancelAnimationFrame(animationID);
-    carousel.classList.remove('grabbing');
-    
-    const movedBy = currentTranslate - previousTranslate;
-
-    if (movedBy < -15) {
-        moveSlide(1);
-    } else if (movedBy > 15) {
-        moveSlide(-1);
-    } else {
-        currentTranslate = previousTranslate;
-        setCarouselPosition();
+function touchMove(event) {
+    if (isDragging) {
+        const currentPosition = getPositionX(event);
+        currentTranslate = prevTranslate + currentPosition - startPos;
     }
 }
 
-function dragging(event) {
-    if (isDragging) {
-        const currentPosition = getPositionX(event);
-        currentTranslate = previousTranslate + currentPosition - startPosition;
-    }
+function touchEnd() {
+    isDragging = false;
+    cancelAnimationFrame(animationID);
+    carousel.classList.remove('grabbing');
+
+    const movedBy = currentTranslate - prevTranslate;
+
+    if (movedBy < -50) moveSlide(1);
+    if (movedBy > 50) moveSlide(-1);
+
+    currentTranslate = 0;
+    prevTranslate = 0;
+
+    setTimeout(startAutoAdvance, 2000);
 }
 
 function getPositionX(event) {
@@ -84,31 +73,20 @@ function getPositionX(event) {
 }
 
 function animation() {
-    setCarouselPosition();
+    carousel.style.transform = `translateX(${currentTranslate}px)`;
     if (isDragging) requestAnimationFrame(animation);
 }
 
-carousel.addEventListener('mousedown', startDrag);
-carousel.addEventListener('mouseup', endDrag);
-carousel.addEventListener('mouseleave', endDrag);
-carousel.addEventListener('mousemove', dragging);
-
-carousel.addEventListener('touchstart', startDrag);
-carousel.addEventListener('touchend', endDrag);
-carousel.addEventListener('touchmove', dragging);
-
-window.addEventListener('resize', () => {
-    carousel.style.transform = 'translateX(0%)';
-    currentSlide = 0;
-    setPositionByIndex();
+carousel.addEventListener('touchstart', touchStart);
+carousel.addEventListener('touchmove', touchMove);
+carousel.addEventListener('touchend', touchEnd);
+carousel.addEventListener('mousedown', touchStart);
+carousel.addEventListener('mousemove', touchMove);
+carousel.addEventListener('mouseup', touchEnd);
+carousel.addEventListener('mouseleave', () => {
+    if (isDragging) touchEnd();
 });
 
-// Inicializar el foco y el avance automático
+// Inicializar el foco y el avance automático al cargar la página
 updateFocus();
-let autoSlideInterval = setInterval(autoMoveSlide, 2000);
-
-// Pausar el avance automático cuando se arrastra y reanudar al soltar
-carousel.addEventListener('mousedown', () => clearInterval(autoSlideInterval));
-carousel.addEventListener('mouseup', () => autoSlideInterval = setInterval(autoMoveSlide, 2000));
-carousel.addEventListener('touchstart', () => clearInterval(autoSlideInterval));
-carousel.addEventListener('touchend', () => autoSlideInterval = setInterval(autoMoveSlide, 2000));
+startAutoAdvance();
