@@ -322,3 +322,63 @@ body{
         }    
     }
 }
+
+.main__libros{
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    .book{
+        width: 300px;
+        display: block;
+        figure{
+            width: 100%;
+            img{
+                width: 100%;
+                display: inline-block;
+            }
+        }
+        h3{
+            color: #13444d;
+        }
+    }
+}
+
+.form-section, .addresses-section, .map-section {
+    background: #ffffff;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  form input, form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background: #e8491d;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  form button:hover {
+    background: #ff6347;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    padding: 10px 0;
+    border-bottom: 1px solid #e0e0e0;
+  }
+  #map {
+    height: 400px;
+    width: 100%;
+  }

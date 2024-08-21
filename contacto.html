@@ -1,11 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <script src="https://kit.fontawesome.com/915acc8817.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="./css/hamburgers.css" rel="stylesheet">
+    <title>Biblioteca Municipal</title>
 </head>
 <body>
-    
+    <header class="header" id="header">
+        <nav class="navbar">
+            <div class="entidad">Municipalidad Distrital de Pampas</div>
+            
+            <button class="hamburger hamburger--spring" id="burguer" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Inicio <i class="fa-solid fa-house"></i></a></li>
+                <li><a href="libros.html">Libros <i class="fa-solid fa-book"></i></a></li>
+                <li><a href="https://dcris96.github.io/mapavirtual/">Mapa Turístico <i class="fa-solid fa-map-location-dot"></i></a></li>
+                <li><a href="contacto.html">Contacto <i class="fa-solid fa-envelope-open-text"></i></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">        
+            <section class="addresses-section">
+              <h2>Nuestros Medios de Contacto</h2>
+              <ul id="address-list">
+                <li><i class="fa-solid fa-location-dot"></i> Plaza de Armas S/N</li>
+                <li><i class="fa-solid fa-user-tie"></i> Oficina de Promoción y Desarrollo Turístico 3er Piso</li>
+                <li><i class="fa-solid fa-phone-volume"></i> 988 387 112</li>
+              </ul>
+            </section>
+        
+            <section class="map-section">
+              <h2>Mapa de Ubicaciones</h2>
+              <div id="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m21!1m12!1m3!1d893.426270898645!2d-77.89606564065046!3d-8.195434838282168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m6!3e6!4m0!4m3!3m2!1d-8.1951600646122!2d-77.89603345414355!5e1!3m2!1ses!2spe!4v1724258006156!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </section>
+          </div>
+    </main>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>
